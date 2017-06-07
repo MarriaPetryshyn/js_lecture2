@@ -1,73 +1,80 @@
-/* 1 Find and display total sum of numbers from 1 to 3 */
+/* 1. Find and display total sum of numbers from 1 to 3 */
 function totalSum(a, b, c) {
   return a + b + c;
 }
 document.getElementById("task-one").innerHTML = totalSum(1, 2, 3);
 
-/* 2 Find and display total sum of numbers from 20 to 220 */
+/* 2. Find and display total sum of numbers from 20 to 220 */
 function totalSumFromTo() {
-    var n = 0;
-    for (var i = 20; i <= 220; i++) {
-        n += i;
-    }
-    console.log(n);
+  var n = 0;
+
+  for (var i = 20; i <= 220; i++) {
+      n += i;
+  }
+  document.getElementById("task-two").innerHTML = n;
 }
 totalSumFromTo()
 
-/* 3 Display even numbers from 1 to 20 by using for loop. */
+/* 3.1 Display even numbers from 1 to 20 by using for loop. */
 function evenWithoutContinue() {
-  var i = 1;
-  while (i <= 20) {
-    i = i + 1;
-    if (i % 2 == 0) {
-      console.log(i);
+  var text = " ";
+  var b = 1;
+
+  while (b <= 20) {
+    b = b + 1 ;
+    if (b % 2 == 0) {
+      text += b + " ";
+      document.getElementById("task-three").innerHTML = text;
     }
   }
 }
 evenWithoutContinue()
 
-/* 4 Display even numbers from 1 to 20 by using for loop. */
-function evenWithoutContinue() {
-  var i = 0;
-  while (i <= 20) {
-    i = i + 1;
-    if (i % 2 !== 0) {
+/* 3.2 Display even numbers from 1 to 20 by using for loop. */
+function evenWithContinue() {
+  var p = 0;
+
+  while (p <= 20) {
+    p = p + 1;
+    if (p % 2 !== 0) {
       continue;
     }
-    if (i % 2 == 0) {
-      console.log(i);
+    if (p % 2 == 0) {
+      console.log(p);
     }
   }
 }
-evenWithoutContinue()
+evenWithContinue()
 
-/* 5 Display odd numbers from 10 to 30 by using ‘while’ loop*/
+/* 4 Display odd numbers from 10 to 30 by using ‘while’ loop*/
 function oddNumbersWithWhile() {
-  var i = 10;
-  while (i < 30) {
-    i = i + 1;
-    if (i % 2 == 1) {
-      console.log(i);
+  var text = " ";
+  var k = 10;
+
+  while (k < 30) {
+    k = k + 1;
+    if (k % 2 == 1) {
+      text += k + " ";
+      document.getElementById("task-four").innerHTML = text;
     }
   }
 }
 oddNumbersWithWhile()
 
-/*- 6 Display numbers from 1 to 15 using ‘for’ loop,
+/*- 5 Display numbers from 1 to 15 using ‘for’ loop,
 once num of iteration is equal the num of month of your birthday then stop execution of loop*/
 function bdBreak() {
-  var i = 1;
 
-  for (; i < 15; i++) {
-      if (i <= 10) {
-      break;
+  for (var h = 1; h <= 15; h++) {
+    if (h === 10) {
+    break;
     }
+  console.log(h);
   }
-    console.log(i);
 }
 bdBreak()
 
-/* 7 Rewrite code from using ‘for’ to using ‘while’
+/* 6 Rewrite code from using ‘for’ to using ‘while’
  */
 function useWhileinsteadFor() {
   var i = 0;
@@ -79,13 +86,13 @@ function useWhileinsteadFor() {
 }
 useWhileinsteadFor()
 
-/* 8 Write code which will ask user (prompt ) to put number greater than 100, repeat
+/* 7 Write code which will ask user (prompt ) to put number greater than 100, repeat
 prompt until user put required number, then display result of prompt. Do it using ‘while’ */
 function doRepeat() {
   var a = 0;
 
   while (isNaN(parseFloat(a)) || (a <= 100)) {
-     a = prompt('Enter number greater than 100');
+    a = prompt('Enter number greater than 100');
   }
 
   alert('Congratulation, you number is greater than 100');
@@ -113,3 +120,4 @@ function hashtagFunnyFunction() {
   	document.write('<br />');
 	}
 }
+hashtagFunnyFunction()
