@@ -64,27 +64,30 @@ oddNumbersWithWhile()
 /*- 5 Display numbers from 1 to 15 using ‘for’ loop,
 once num of iteration is equal the num of month of your birthday then stop execution of loop*/
 function bdBreak() {
-
+	var text = " ";
   for (var h = 1; h <= 15; h++) {
-    if (h === 10) {
+    if (h > 10) {
     break;
     }
-  console.log(h);
+  text += h + " ";
+	document.getElementById("task-five").innerHTML = text;
   }
 }
 bdBreak()
 
 /* 6 Rewrite code from using ‘for’ to using ‘while’
  */
-function useWhileinsteadFor() {
+ function useWhileinsteadFor() {
+  var text = " ";
   var i = 0;
 
   while (i < 5) {
     i++
-    console.log(`number ${i}  =)`);
+    text += "number" + " " + i + " " + "=) <br>";
+    document.getElementById("task-six").innerHTML = text;
   }
-}
-useWhileinsteadFor()
+ }
+ useWhileinsteadFor()
 
 /* 7 Write code which will ask user (prompt ) to put number greater than 100, repeat
 prompt until user put required number, then display result of prompt. Do it using ‘while’ */
@@ -98,6 +101,7 @@ function doRepeat() {
   alert('Congratulation, you number is greater than 100');
 }
 doRepeat()
+
 /*8 Write code which will ask user (prompt ) to put number greater than 100, repeat
 prompt until user put required number, then display result of prompt. Do it using ‘do while’*/
 function doRepeatDoWhile() {
@@ -113,11 +117,11 @@ doRepeatDoWhile()
 
 /*9 Show in console using for*/
 function hashtagFunnyFunction() {
-	for (var i = 1; i <= 8; i++) {
-    for (var j = 1; j <= i; j++) {
-      document.write("#");
-    }
-  	document.write('<br />');
-	}
+  var str = '';
+
+  for(var i = 0;i<8;i++) {
+    str = str + '#';
+    console.log(str);
+  }
 }
 hashtagFunnyFunction()
